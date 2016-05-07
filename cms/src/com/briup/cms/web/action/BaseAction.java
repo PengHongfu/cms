@@ -12,7 +12,7 @@ public class BaseAction extends ActionSupport {
 	/**
 	 * 跳转到首页
 	 * ip:port/命名空间/url
-	 * http://localhost:8888/toIndex.action
+	 * http://localhost:8080/toIndex.action
 	 * */
 	@Action(value="toIndex",results={
 			@Result(name="success",location="/WEB-INF/jsp/index.jsp")})

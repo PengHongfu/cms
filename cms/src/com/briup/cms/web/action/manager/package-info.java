@@ -6,5 +6,5 @@ import org.apache.struts2.convention.annotation.ParentPackage;
 /**
  * 后台管理全局设定
  * 命名空间/manager
- * http://localhost:8888/cms/manager/toIndex.action
+ * http://localhost:8080/cms/manager/toIndex.action
  * */

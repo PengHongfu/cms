@@ -11,11 +11,26 @@ public class BaseAction extends ActionSupport {
 	/**
 	 * 跳转到后台首页
 	 * ip:port/命名空间/url
-	 * http://localhost:8888/manager/toIndex.action
+	 * http://localhost:8080/manager/toIndex.action
 	 * */
 	@Action(value="toIndex",results={
 			@Result(name="success",location="/WEB-INF/jsp/manager/index.jsp")})
 	public String toIndex(){
+		return "success";
+	}
+	@Action(value="toAddCategory",results={
+			@Result(name="success",location="/WEB-INF/jsp/manager/addCategory.jsp")})
+	public String toAddCategory(){
+		return "success";
+	}
+	@Action(value="toCategoryManager",results={
+			@Result(name="success",location="/WEB-INF/jsp/manager/categoryManager.jsp")})
+	public String toCategoryManager(){
+		return "success";
+	}
+	@Action(value="toAddStudent",results={
+			@Result(name="success",location="/WEB-INF/jsp/manager/addStudent.jsp")})
+	public String toAddStudent(){
 		return "success";
 	}
 }

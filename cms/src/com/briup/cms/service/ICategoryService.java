@@ -3,6 +3,7 @@ package com.briup.cms.service;
 import java.util.List;
 
 import com.briup.cms.bean.Category;
+import com.briup.cms.bean.Student;
 
 /**
  * 栏目管理的业务逻辑
@@ -14,4 +15,5 @@ public interface ICategoryService {
 	List<Category> list();
 	//删除栏目
 	void delete(long id);
+	
 }

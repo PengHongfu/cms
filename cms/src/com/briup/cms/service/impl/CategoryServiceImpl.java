@@ -7,7 +7,8 @@ import com.briup.cms.dao.CategoryDao;
 import com.briup.cms.service.ICategoryService;
 
 public class CategoryServiceImpl implements ICategoryService {
-	private CategoryDao categoryDao;
+	private CategoryDao categoryDao = new CategoryDao();
+
 	@Override
 	public void add(Category category) {
 		categoryDao.save(category);
@@ -22,5 +23,7 @@ public class CategoryServiceImpl implements ICategoryService {
 	public void delete(long id) {
 		
 	}
+
+	
 
 }

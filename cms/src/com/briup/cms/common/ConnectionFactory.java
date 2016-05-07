@@ -11,9 +11,9 @@ public class ConnectionFactory {
 	
 	static{
 		driver = "com.mysql.jdbc.Driver";
-		url = "jdbc:mysql://127.0.0.1:3306/cms34";
+		url = "jdbc:mysql://127.0.0.1:3306/cms12";
 		user = "root";
-		password = "root";
+		password = "mysql";
 	}
 	public static Connection getConn () {
 		Connection conn = null;

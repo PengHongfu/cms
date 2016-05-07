@@ -39,12 +39,17 @@ $(function(){
 			<div class="centent">
 				<div class="left">
 					<ul class="baseUI">
-						<li url="toAddCategory.action"><a href="#"><em class="base_basicset"></em><span>添加栏目</span></a>
+						<li url="toAddCategory.action"><a href="#">
+						<em class="base_basicset"></em><span>添加栏目</span></a>
 						</li>
-						<li url="toCategoryManager.action"><a href="#"><em class="base_userset"></em><span>栏目管理</span></a></li>
-
+						<li url="toCategoryManager.action"><a href="#">
+						<em class="base_userset"></em><span>栏目管理</span></a>
+						</li>
 						<li url=""><a href="#"><em class="base_roll"></em><span>信息发布</span></a></li>
 						<li url=""><a href="#"><em class="base_sys"></em><span>信息管理</span></a></li>
+						<li url="toAddStudent.action"><a href="#"><em class="base_basicset">
+						</em><span>添加学生</span></a>
+						</li>
 					</ul>
 				</div>
 				<!-- 内容页面 -->

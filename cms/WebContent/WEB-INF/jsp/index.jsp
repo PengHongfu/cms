@@ -3,8 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<meta charset="utf-8">
 <title>首页</title>
 <link rel="stylesheet" type="text/css" href="theme/1/css/common.css">
 <link rel="stylesheet" type="text/css" href="theme/1/css/front/style.css">
@@ -12,7 +11,36 @@
 
 <body>
 <div id="main">
-    <jsp:include page="header.jsp"></jsp:include>
+    <div class="top">
+    	<div class="topbg">
+            <div class="logo_sign">
+            	<div class="logo"></div>
+                <div class="sign">
+                	<span>欢迎您系统管理员</span>
+                    <span class="sp_home">首页</span>
+                    <span class="sp_backstage">
+                        <a href="manager/toIndex.action">后台管理</a>
+                    </span>
+                    <span class="sp_signout">退出</span>
+                </div>
+            </div> 
+            <div class="nav">
+            	<ul class="navUI">
+                	<li><a href="javascript:void(0);">首页</a></li>
+                    <li><a href="javascript:void(0);">教师风采</a></li>
+                    <li><a href="javascript:void(0);">爱在身边1</a></li>
+                    <li><a href="javascript:void(0);">好书相伴</a></li>
+                    <li><a href="javascript:void(0);">读书心得2</a></li>
+                    <li><a href="javascript:void(0);">智慧课堂</a></li>
+                    <li><a href="javascript:void(0);">教育教研</a></li>
+                    <li><a href="javascript:void(0);">特色活动</a></li>
+                </ul>
+            </div>
+            <div class="banner">
+            	<div class="banimg"><img src="theme/1/images/front/banner.png"></div>
+            </div>
+        </div>
+    </div>
     <div class="content">
     	<div class="congw">
             
@@ -27,7 +55,7 @@
                     <div class="cont">
                     	<ul class="discipUI">
                         	<li>
-                            	<a href="toContent.action" class="txt_title">地壳运动的奥秘</a><span class="txt_discipline">语文</span><span class="txt_time">2015-03-20</span>
+                            	<a href="javascript:void(0)" class="txt_title">地壳运动的奥秘</a><span class="txt_discipline">语文</span><span class="txt_time">2015-03-20</span>
                             </li>
                             <li>
                             	<a href="javascript:void(0)" class="txt_title">地壳运动的奥秘</a><span class="txt_discipline">语文</span><span class="txt_time">2015-03-20</span>
