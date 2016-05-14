@@ -16,12 +16,12 @@ public class CategoryServiceImpl implements ICategoryService {
 	
 	@Override
 	public List<Category> list() {
-		return null;
+		return categoryDao.findAll();
 	}
 	
 	@Override
 	public void delete(long id) {
-		
+		categoryDao.deleteById(id);
 	}
 
 	

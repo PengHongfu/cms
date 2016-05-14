@@ -1,14 +1,22 @@
 package com.briup.cms.web.action;
 
+import java.util.List;
+
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Result;
 
+import com.briup.cms.bean.Category;
+import com.briup.cms.service.ICategoryService;
+import com.briup.cms.service.impl.CategoryServiceImpl;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class BaseAction extends ActionSupport {
 
 	private static final long serialVersionUID = 1L;
+	private List<Category> list;
+	private ICategoryService categoryService = new CategoryServiceImpl();
 	
+
 	/**
 	 * 跳转到首页
 	 * ip:port/命名空间/url
@@ -17,14 +25,16 @@ public class BaseAction extends ActionSupport {
 	@Action(value="toIndex",results={
 			@Result(name="success",location="/WEB-INF/jsp/index.jsp")})
 	public String toIndex(){
-		System.out.println("hello---toIndex");
+		//调用service方法查询栏目信息，并给categorylist里 
+		list = categoryService.list();
+		//System.out.println("hello---toIndex");
 		return "success";
 	}
 	
 	/**
 	 * 跳转到列表页
 	 * */
-	@Action(value="toList",results={
+	@Action(value="to  List",results={
 			@Result(name="success",location="/WEB-INF/jsp/list.jsp")})
 	public String toList(){
 		
@@ -40,4 +50,13 @@ public class BaseAction extends ActionSupport {
 		
 		return "success";
 	}
+
+	public List<Category> getList() {
+		return list;
+	}
+
+	public void setList(List<Category> list) {
+		this.list = list;
+	}
+
 }
