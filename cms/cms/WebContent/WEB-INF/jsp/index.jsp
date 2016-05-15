@@ -28,8 +28,7 @@
             <div class="nav">
             	<ul class="navUI">
                 	<li><a href="javascript:void(0);">首页</a></li>
-                	
-	                <c:forEach items="${list }" var="c">
+	                <c:forEach items="${categorylist }" var="c">
 	                    <li><a href="javascript:void(0);">${c.name }</a></li>
 	                </c:forEach>
                 </ul>

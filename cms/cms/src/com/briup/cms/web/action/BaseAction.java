@@ -13,10 +13,8 @@ import com.opensymphony.xwork2.ActionSupport;
 public class BaseAction extends ActionSupport {
 
 	private static final long serialVersionUID = 1L;
-	private List<Category> list;
+	private List<Category> categorylist;
 	private ICategoryService categoryService = new CategoryServiceImpl();
-	
-
 	/**
 	 * 跳转到首页
 	 * ip:port/命名空间/url
@@ -25,8 +23,8 @@ public class BaseAction extends ActionSupport {
 	@Action(value="toIndex",results={
 			@Result(name="success",location="/WEB-INF/jsp/index.jsp")})
 	public String toIndex(){
-		//调用service方法查询栏目信息，并给categorylist里 
-		list = categoryService.list();
+		//调用service方法查询栏目信息，并给list里 
+		categorylist = categoryService.list();
 		//System.out.println("hello---toIndex");
 		return "success";
 	}
@@ -34,7 +32,7 @@ public class BaseAction extends ActionSupport {
 	/**
 	 * 跳转到列表页
 	 * */
-	@Action(value="to  List",results={
+	@Action(value="toList",results={
 			@Result(name="success",location="/WEB-INF/jsp/list.jsp")})
 	public String toList(){
 		
@@ -51,12 +49,13 @@ public class BaseAction extends ActionSupport {
 		return "success";
 	}
 
-	public List<Category> getList() {
-		return list;
+	public List<Category> getCategorylist() {
+		return categorylist;
 	}
 
-	public void setList(List<Category> list) {
-		this.list = list;
+	public void setCategorylist(List<Category> categorylist) {
+		this.categorylist = categorylist;
 	}
+
 
 }

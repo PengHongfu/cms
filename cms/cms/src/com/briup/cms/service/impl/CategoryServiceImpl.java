@@ -13,12 +13,10 @@ public class CategoryServiceImpl implements ICategoryService {
 	public void add(Category category) {
 		categoryDao.save(category);
 	}
-	
 	@Override
 	public List<Category> list() {
 		return categoryDao.findAll();
 	}
-	
 	@Override
 	public void delete(long id) {
 		categoryDao.deleteById(id);
