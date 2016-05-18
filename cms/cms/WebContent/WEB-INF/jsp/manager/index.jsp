@@ -9,20 +9,22 @@
 <link rel="stylesheet" type="text/css" href="../theme/1/css/style.css">
 <link rel="stylesheet" type="text/css" href="../theme/1/css/table.css">
 <link rel="stylesheet" type="text/css" href="../theme/1/css/icon.css">
-<link rel="stylesheet" type="text/css"href="../theme/1/jquery-easyui-themes/default/easyui.css">
-<link rel="stylesheet" type="text/css"href="../theme/1/css/easyui-tabs.css">
+<link rel="stylesheet" type="text/css"
+	href="../theme/1/jquery-easyui-themes/default/easyui.css">
+<link rel="stylesheet" type="text/css"
+	href="../theme/1/css/easyui-tabs.css">
 <script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
 <script type="text/javascript" src="../js/jquery.form.js"></script>
 <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
 <script type="text/javascript" src="../theme/1/js/base.js"></script>
 </head>
 <script type="text/javascript">
-$(function(){
-	$(".baseUI li").on("click",function(){
-		var url = $(this).attr("url");
-		$(".right").load(url);		
+	$(function() {
+		$(".baseUI li").on("click", function() {
+			var url = $(this).attr("url");
+			$(".right").load(url);
+		});
 	});
-});
 </script>
 <body>
 	<div class="main">
@@ -38,26 +40,26 @@ $(function(){
 			<div class="centent">
 				<div class="left">
 					<ul class="baseUI">
-						<li url="toAddCategory.action"><a href="#">
-						<em class="base_basicset"></em><span>添加栏目</span></a>
-						</li>
-						<li url="toCategoryManager.action"><a href="#">
-						<em class="base_userset"></em><span>栏目管理</span></a>
-						</li>
-						<li url="toAddArticle.action"><a href="#">
-						<em class="base_roll"></em><span>信息发布</span></a>
-						</li>
-						
+						<li url="toAddCategory.action"><a href="#"> <em
+								class="base_basicset"></em><span>添加栏目</span></a></li>
+						<li url="toCategoryManager.action"><a href="#"> <em
+								class="base_userset"></em><span>栏目管理</span></a></li>
+						<li url="toAddArticle.action"><a href="#"> <em
+								class="base_roll"></em><span>信息发布</span></a></li>
+
 						<li url=""><a href="#"><em class="base_sys"></em><span>信息管理</span></a></li>
-						<li url="toAddStudent.action"><a href="#"><em class="base_basicset">
-						</em><span>添加学生</span></a>
-						</li>
+						<!--<li url="toAddStudent.action"><a href="#"><em
+								  class="base_basicset"> </em><span>添加学生</span></a></li>-->
+						<li url="toAddCar.action"><a href="#"><em
+								class="base_basicset"> </em><span>添加汽车品牌</span></a></li>
+						<li url="toCarManager.action"><a href="#"> <em
+								class="base_userset"></em><span>品牌管理</span></a></li>
+						<li url="toAddCar.action"><a href="#"> <em
+								class="base_roll"></em><span>汽车发布</span></a></li>
 					</ul>
 				</div>
 				<!-- 内容页面 -->
-				<div class="right" style="padding:30px">
-						
-				</div>
+				<div class="right" style="padding: 30px"></div>
 				<div class="clear"></div>
 			</div>
 		</div>

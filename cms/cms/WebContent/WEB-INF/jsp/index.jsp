@@ -232,14 +232,14 @@
             </div>
             <div class="link">
             	<div class="linelink">
-            		<span>友情链接：</span><a href="javascript:void(0)">上海教育网</a><a href="javascript:void(0)">上海杰普软件科技有限公司</a><a href="javascript:void(0)">郑州轻工学院</a><a href="javascript:void(0)">郑州大学</a>
+            		<span>友情链接：</span><a href="javascript:void(0)">江西理工大学</a><a href="javascript:void(0)">江西理工大学南昌校区</a><a href="javascript:void(0)">郑州轻工学院</a><a href="javascript:void(0)">郑州大学</a>
                 </div>
             </div>
         </div>
     </div>
     <div class="footer">
     	<div class="foot">
-        	<p>杰普信息发布系统 技术支持：<a href="javascript:void(0)">上海杰普软件科技有限公司</a>      电话：021-xxxxxxx</p>
+        	<p>信息发布系统 技术支持：<a href="javascript:void(0)">江西理工大学南昌校区</a>      电话：021-xxxxxxx</p>
         </div>
     </div>
 </div>

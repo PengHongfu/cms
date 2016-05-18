@@ -29,5 +29,10 @@ public class BaseAction extends ActionSupport {
 	public String toAddStudent(){
 		return "success";
 	}
+	@Action(value="toAddCar",results={
+			@Result(name="success",location="/WEB-INF/jsp/manager/addCar.jsp")})
+	public String toAddCar(){
+		return "success";
+	}
 	
 }
