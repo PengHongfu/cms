@@ -6,27 +6,28 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-import com.briup.cms.bean.Article;
+
+import com.briup.cms.bean.Automobile;
 import com.briup.cms.common.ConnectionFactory;
 
-public class ArticleDao {
-	public void save(Article article){
+public class AutomobileDao {
+	public void save(Automobile automobile){
 		try {
 			Connection conn = null;
 			PreparedStatement pstmt = null;
 			try {
 				conn = ConnectionFactory.getConn();
-				String sql = "insert into t_article("
-						+ "title,content,author,publishDate,c_id) values(?,?,?,?,?)";
+				String sql = "insert into t_automobile("
+						+ "title,company,content,publishDate,c_id) values(?,?,?,?,?)";
 				//预处理sql
 				pstmt = conn.prepareStatement(sql);
-				pstmt.setString(1, article.getTitle());
-				pstmt.setString(2, article.getContent());
-				pstmt.setString(3, article.getAuthor());
+				pstmt.setString(1, automobile.getTitle());
+				pstmt.setString(3, automobile.getContent());
+				pstmt.setString(2, automobile.getCompany());
 				//java.sql.Date  java.util.Date
-				long time = article.getPublishDate().getTime();
+				long time = automobile.getPublishDate().getTime();
 				pstmt.setDate(4, new Date(time));
-				pstmt.setLong(5, article.getC_id());
+				pstmt.setLong(5, automobile.getC_id());
 				
 				//执行sql
 				pstmt.executeUpdate();
@@ -45,27 +46,27 @@ public class ArticleDao {
 	/*
 	 * 查询信息
 	 * */
-	public List<Article>findAll(){
-		List<Article> list = new ArrayList<Article>();
+	public List<Automobile>findAll(){
+		List<Automobile> list = new ArrayList<Automobile>();
 		try {
 			Connection conn = null;
 			PreparedStatement pstmt = null;
 			ResultSet rs = null;
 			try{
 				conn = ConnectionFactory.getConn();
-				String sql = "select * from t_article";
+				String sql = "select * from t_automobile";
 				pstmt = conn.prepareStatement(sql);
 				rs = pstmt.executeQuery();
 				while(rs.next()){
-					Article article = new Article();
+					Automobile autombile = new Automobile();
 					long id = rs.getLong("id");
 					String title = rs.getString("title");
-					String author = rs.getString("author");
+					String company = rs.getString("company");
 					String content = rs.getString("content");				
 					java.util.Date publishDate = rs.getDate("publishDate");
 					long c_id = rs.getLong("c_id");
-					Article artitle = new Article(id, title, author, content, publishDate, c_id);
-				   list.add(artitle);
+					Automobile automoblie1 = new Automobile(id, title, company, content, publishDate, c_id);
+				   list.add(automoblie1);
 				}
 			}finally{
 				if(rs!=null){
@@ -84,14 +85,14 @@ public class ArticleDao {
 		
 		return list;
 	}
-public void deleteById(long id){
+	public void deleteById(long id){
 		try {
 			Connection conn = null;
 			PreparedStatement pstmt = null;
 			try{
 				//获取连接
 				conn = ConnectionFactory.getConn();
-				String sql = "delete from t_article where id=?";
+				String sql = "delete from t_automobile where id=?";
 				//预处理sql
 				pstmt = conn.prepareStatement(sql);
 				pstmt.setLong(1,id);

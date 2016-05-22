@@ -13,22 +13,24 @@
 		font-size: 14px;
 	}
 </style>
-<h1>品牌管理</h1>
+<h1>文章管理</h1>
 <hr>
-<table border="1" style="width: 100%;border-collapse:collapse;">
+<table  border="1" style="width: 100%;border-collapse: collapse;margin-top: 10px" >
 	<tr>
 		<th>编号</th>
-		<th>品牌名称</th>
-		<th>品牌国籍</th>
+		<th>文章标题</th>
+		<th>文章作者</th>
+		<th>发布日期</th>
 		<th>操作</th>
 	</tr>
-	<c:forEach items="${carlist}" var="c" >
+	<c:forEach items="${articlelist}" var="a" >
 	<tr>
 		<td><input type="checkbox"/></td>
-		<td>${c.brand_name}</td>
-		<td>${c.brand_nation}</td>
+		<td>${a.title}</td>
+		<td>${a.author}</td>
+		<td>${a.publishDate}</td>
 		<td>
-		<a href="javascript:void(0);"val="${c.brand_id }"class ="del">删除  </a>
+		<a href="javascript:void(0);" val="${a.id }"class ="del">删除  </a>
         <a href="javascript:void(0);">修改   </a>
          </td>
 	</tr>
@@ -36,21 +38,18 @@
 </table>
 <script>
 $(function(){
-	var url = "delCar.action";
-	var cc = $(".baseUI li:contains('品牌管理')");
-	
+	var url = "delArticle.action";
+	var cc = $(".baseUI li:contains('信息管理')");
 	$(".del").off();
 	$(".del").on("click",function(){
 		var id = $(this).attr("val");
 		var flag = confirm("确认删除吗？");
 		if(flag){
-			$.post(url,{brand_id:id},function(){
-				//$.post(url,parameters,callback)，parameters"键和值"
+			$.post(url,{id:id},function(){
 				//模拟点击
 				cc.trigger("click");
 			})
 		}
 	});
 });
-
 </script>

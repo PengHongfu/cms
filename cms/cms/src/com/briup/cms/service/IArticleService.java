@@ -8,4 +8,5 @@ public interface IArticleService {
 	//添加学生
 		void add(Article article);
 		List<Article> list();
+		void delete(long id);
 }

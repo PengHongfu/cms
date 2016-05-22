@@ -23,7 +23,6 @@ public class BaseAction extends ActionSupport {
 	public String toAddCategory(){
 		return "success";
 	}
-	
 	@Action(value="toAddStudent",results={
 			@Result(name="success",location="/WEB-INF/jsp/manager/addStudent.jsp")})
 	public String toAddStudent(){

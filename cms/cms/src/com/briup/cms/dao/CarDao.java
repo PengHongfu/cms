@@ -5,9 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-
 import com.briup.cms.bean.Car;
-import com.briup.cms.bean.Category;
 import com.briup.cms.common.ConnectionFactory;
 
 public class CarDao {

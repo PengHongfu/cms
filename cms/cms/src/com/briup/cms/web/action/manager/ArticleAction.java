@@ -1,8 +1,10 @@
 package com.briup.cms.web.action.manager;
 import java.util.Date;
 import java.util.List;
+
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Result;
+
 import com.briup.cms.bean.Article;
 import com.briup.cms.bean.Category;
 import com.briup.cms.service.IArticleService;
@@ -20,11 +22,13 @@ public class ArticleAction extends ActionSupport {
 	private ICategoryService categoryService 
               = new CategoryServiceImpl();
     private List<Category> categorylist;
+    private List<Article> articlelist;
     private String title;
     private String author;
     private String content;
     private Long c_id;
-	//栏目选择
+    private Long id;
+
 	@Action(value="toAddArticle",results={
 			@Result(name="success",location="/WEB-INF/jsp/manager/addArticle.jsp")})
 	public String toAddArticle(){
@@ -38,7 +42,25 @@ public class ArticleAction extends ActionSupport {
 		articleService.add(article);
     	//System.out.println("添加栏目");
     }
+	//删除文章
+		@Action(value= "delArticle")
+		public void delCategory(){
+			articleService.delete(id);
+	    	//System.out.println(id);
+	    }
+	@Action(value="toArticleManager",results={
+			@Result(name="success",location="/WEB-INF/jsp/manager/articleManager.jsp")})
+	public String toArticleManager(){
+		articlelist = articleService.list();
+		return "success";
+	}
 
+	public List<Article> getArticlelist() {
+		return articlelist;
+	}
+	public void setArticlelist(List<Article> articlelist) {
+		this.articlelist = articlelist;
+	}
 	public IArticleService getArticleService() {
 		return articleService;
 	}
@@ -75,6 +97,11 @@ public class ArticleAction extends ActionSupport {
 	public void setCategorylist(List<Category> categorylist) {
 		this.categorylist = categorylist;
 	}
-	
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
 	
 }

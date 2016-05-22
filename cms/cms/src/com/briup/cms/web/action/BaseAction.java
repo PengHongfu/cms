@@ -35,10 +35,9 @@ public class BaseAction extends ActionSupport {
 	@Action(value="toList",results={
 			@Result(name="success",location="/WEB-INF/jsp/list.jsp")})
 	public String toList(){
-		
+		categorylist = categoryService.list();
 		return "success";
 	}
-	
 	/**
 	 * 跳转到内容页
 	 * */

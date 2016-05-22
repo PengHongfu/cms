@@ -18,5 +18,10 @@ public class ArticleServiceImpl implements  IArticleService{
 	public List<Article> list() {	
 		return articleDao.findAll();
 	}
+	@Override
+	public void delete(long id) {
+		articleDao.deleteById(id);
+		
+	}
 
 }

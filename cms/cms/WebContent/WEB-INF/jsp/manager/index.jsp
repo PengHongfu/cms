@@ -24,6 +24,7 @@
 			var url = $(this).attr("url");
 			$(".right").load(url);
 		});
+	$(".baseUI li").filter(":first").trigger("click");
 	});
 </script>
 <body>
@@ -47,15 +48,20 @@
 						<li url="toAddArticle.action"><a href="#"> <em
 								class="base_roll"></em><span>信息发布</span></a></li>
 
-						<li url=""><a href="#"><em class="base_sys"></em><span>信息管理</span></a></li>
+						<li url="toArticleManager.action"><a href="#">
+						<em class="base_sys"></em><span>信息管理</span></a></li>
+						
 						<!--<li url="toAddStudent.action"><a href="#"><em
 								  class="base_basicset"> </em><span>添加学生</span></a></li>-->
+								  
 						<li url="toAddCar.action"><a href="#"><em
 								class="base_basicset"> </em><span>添加汽车品牌</span></a></li>
 						<li url="toCarManager.action"><a href="#"> <em
 								class="base_userset"></em><span>品牌管理</span></a></li>
-						<li url="toAddCar.action"><a href="#"> <em
+						<li url="toAddAutomobile.action"><a href="#"> <em
 								class="base_roll"></em><span>汽车发布</span></a></li>
+						<li url="toAutomobileManager.action"><a href="#"> <em
+								class="base_userset"></em><span>汽车管理</span></a></li>
 					</ul>
 				</div>
 				<!-- 内容页面 -->
